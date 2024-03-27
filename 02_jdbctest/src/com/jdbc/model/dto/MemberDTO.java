@@ -10,7 +10,7 @@ public class MemberDTO {
 	private String memberName;
 	private char gender;
 	private int age;
-	private String emial;
+	private String email;
 	private String phone;
 	private String address;
 	private String[] hobby;
@@ -20,7 +20,7 @@ public class MemberDTO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public MemberDTO(String memberId, String memberPwd, String memberName, char gender, int age, String emial,
+	public MemberDTO(String memberId, String memberPwd, String memberName, char gender, int age, String email,
 			String phone, String address, String[] hobby, LocalDate enrollDate) {
 		super();
 		this.memberId = memberId;
@@ -28,7 +28,7 @@ public class MemberDTO {
 		this.memberName = memberName;
 		this.gender = gender;
 		this.age = age;
-		this.emial = emial;
+		this.email = email;
 		this.phone = phone;
 		this.address = address;
 		this.hobby = hobby;
@@ -75,12 +75,12 @@ public class MemberDTO {
 		this.age = age;
 	}
 
-	public String getEmial() {
-		return emial;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setEmial(String emial) {
-		this.emial = emial;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getPhone() {
@@ -118,7 +118,7 @@ public class MemberDTO {
 	@Override
 	public String toString() {
 		return "MemberDTO [memberId=" + memberId + ", memberPwd=" + memberPwd + ", memberName=" + memberName
-				+ ", gender=" + gender + ", age=" + age + ", emial=" + emial + ", phone=" + phone + ", address="
+				+ ", gender=" + gender + ", age=" + age + ", email=" + email + ", phone=" + phone + ", address="
 				+ address + ", hobby=" + Arrays.toString(hobby) + ", enrollDate=" + enrollDate + "]";
 	}
 
@@ -128,7 +128,7 @@ public class MemberDTO {
 		int result = 1;
 		result = prime * result + Arrays.hashCode(hobby);
 		result = prime * result
-				+ Objects.hash(address, age, emial, enrollDate, gender, memberId, memberName, memberPwd, phone);
+				+ Objects.hash(address, age, email, enrollDate, gender, memberId, memberName, memberPwd, phone);
 		return result;
 	}
 
@@ -141,7 +141,7 @@ public class MemberDTO {
 		if (getClass() != obj.getClass())
 			return false;
 		MemberDTO other = (MemberDTO) obj;
-		return Objects.equals(address, other.address) && age == other.age && Objects.equals(emial, other.emial)
+		return Objects.equals(address, other.address) && age == other.age && Objects.equals(email, other.email)
 				&& Objects.equals(enrollDate, other.enrollDate) && gender == other.gender
 				&& Arrays.equals(hobby, other.hobby) && Objects.equals(memberId, other.memberId)
 				&& Objects.equals(memberName, other.memberName) && Objects.equals(memberPwd, other.memberPwd)
