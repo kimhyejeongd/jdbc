@@ -8,6 +8,7 @@ public class MainView {
 	Scanner sc=new Scanner(System.in);
 	public void MainMenu() {
 		while(true) {
+			
 			System.out.println("====회원관리====");
 			System.out.println("1. 전체회원 조회");
 			System.out.println("2. 아이디로 조회");
@@ -17,7 +18,7 @@ public class MainView {
 			System.out.println("6. 회원삭제");
 			System.out.println("0. 프로그램 종료 ");
 			System.out.println("번호 입력 : ");
-			sc.nextLine();
+			int menuChoice=sc.nextInt();
 			MemberController controller=new MemberController();
 		switch(menuChoice) {
 			case 1 : controller.searchAllMember(); break;
